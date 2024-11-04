@@ -2,28 +2,31 @@
 require_once 'core/dbConfig.php';
 require_once 'core/models.php';
 
+$artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Art Gallery</h1>
         <a href="addArtwork.php">Add New Artwork</a>
     </header>
-    
+
     <main>
         <h2>Artworks</h2>
         <table>
             <thead>
                 <tr>
-                    <th></th>
+                    <th>ID</th>
                     <th>Title</th>
                     <th>Artist</th>
                     <th>Year Created</th>
@@ -49,9 +52,10 @@ require_once 'core/models.php';
             </tbody>
         </table>
     </main>
-    
+
     <footer>
         <p>&copy; <?php echo date("Y"); ?> Art Gallery</p>
     </footer>
 </body>
+
 </html>

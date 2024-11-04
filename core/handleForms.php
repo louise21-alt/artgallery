@@ -6,7 +6,7 @@ require_once 'models.php';
 if (isset($_POST['submitArtworkButton'])) {
     // Ensure the names match the form fields
     $query = addArtwork($pdo, $_POST['title'], $_POST['artist'], $_POST['yearCreated']);
-    
+
     if ($query) {
         echo "Artwork added successfully!<br><br>";
         echo "<a href='../index.php'>Return Home</a>";
@@ -16,7 +16,7 @@ if (isset($_POST['submitArtworkButton'])) {
 }
 
 if (isset($_POST['editArtworkBtn'])) {
-    $query = updateArtwork($pdo, $_GET['artwork_id'], $_POST['title'], $_POST['artist'], $_POST['YearCreated'], $_POST['GalleryID']);
+    $query = updateArtwork($pdo, $_GET['artwork_id'], $_POST['title'], $_POST['artist'], $_POST['YearCreated']);
     if ($query) {
         echo "Artwork updated successfully!<br><br>";
         echo "<a href='../index.php'>Return Home</a>";
@@ -34,4 +34,3 @@ if (isset($_POST["deleteArtworkBtn"])) {
         echo "Failed to delete artwork!";
     }
 }
-?>
