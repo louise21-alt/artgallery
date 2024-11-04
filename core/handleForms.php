@@ -15,8 +15,15 @@ if (isset($_POST['submitArtworkButton'])) {
     }
 }
 
+
 if (isset($_POST['editArtworkBtn'])) {
-    $query = updateArtwork($pdo, $_GET['artwork_id'], $_POST['title'], $_POST['artist'], $_POST['YearCreated']);
+    $artworkID = $_POST['ArtworkID'];
+    $title = $_POST['title'];
+    $artist = $_POST['artist'];
+    $yearCreated = $_POST['yearCreated'];
+
+    $query = updateArtwork($pdo, $artworkID, $title, $artist, $yearCreated);
+
     if ($query) {
         echo "Artwork updated successfully!<br><br>";
         echo "<a href='../index.php'>Return Home</a>";
@@ -25,8 +32,11 @@ if (isset($_POST['editArtworkBtn'])) {
     }
 }
 
-if (isset($_POST["deleteArtworkBtn"])) {
-    $query = deleteArtwork($pdo, $_GET['artwork_id']);
+if (isset($_POST['deleteArtworkBtn'])) {
+    $artworkID = $_POST['ArtworkID'];
+
+    $query = deleteArtwork($pdo, $artworkID);
+
     if ($query) {
         echo "Artwork deleted successfully!<br><br>";
         echo "<a href='../index.php'>Return Home</a>";
@@ -34,3 +44,4 @@ if (isset($_POST["deleteArtworkBtn"])) {
         echo "Failed to delete artwork!";
     }
 }
+?>

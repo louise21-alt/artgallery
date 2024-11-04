@@ -18,7 +18,9 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
 <body>
     <header>
         <h1>Art Gallery</h1>
-        <a href="addArtwork.php">Add New Artwork</a>
+        <div class="header-actions">
+            <a href="addArtwork.php">Add New Artwork</a>
+        </div>
     </header>
 
     <main>
@@ -41,11 +43,9 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
                         <td><?php echo htmlspecialchars($row['Artist']); ?></td>
                         <td><?php echo htmlspecialchars($row['YearCreated']); ?></td>
                         <td>
-                            <a href="editArtwork.php?id=<?php echo $row['ArtworkID']; ?>">Edit</a>
-                            <form method="POST" action="handleForms.php" style="display:inline;">
-                                <input type="hidden" name="artworkID" value="<?php echo $row['ArtworkID']; ?>">
-                                <input type="submit" name="deleteArtworkBtn" value="Delete" onclick="return confirm('Are you sure?');">
-                            </form>
+                            <a href="viewGallery.php?ArtworkID=<?php echo $row['ArtworkID']; ?>">View</a>
+                            <a href="editArtwork.php?ArtworkID=<?php echo $row['ArtworkID']; ?>">Edit</a>
+                            <a href="deleteArtwork.php?ArtworkID=<?php echo $row['ArtworkID']; ?>">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -53,9 +53,6 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
         </table>
     </main>
 
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Art Gallery</p>
-    </footer>
 </body>
 
 </html>

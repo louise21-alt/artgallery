@@ -12,3 +12,9 @@ CREATE TABLE Artwork (
     GalleryID INT,
     FOREIGN KEY (GalleryID) REFERENCES ArtGallery(GalleryID)
 );
+
+ALTER TABLE ArtGallery
+ADD COLUMN Description TEXT,
+ADD COLUMN ContactInfo VARCHAR(255);
+
+ALTER TABLE ArtGallery MODIFY COLUMN GalleryID INT AUTO_INCREMENT;
