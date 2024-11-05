@@ -5,9 +5,11 @@ body, h1, h2, p, table, th, td {
 
 body {
     font-family: 'Georgia', serif;
-    background:('painting_bg.jpg');
+    background-image: url(img/painting_bg.jpg);
     background-size: cover;
-    color: #3b2e2e;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center
 }
 
 header {
@@ -41,7 +43,7 @@ header h1 {
 }
 
 main {
-    max-width: 850px;
+    max-width: 1100px;
     margin: 30px auto;
     padding: 25px;
     background: rgba(253, 245, 230, 0.95);

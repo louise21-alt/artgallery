@@ -13,6 +13,11 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-actions a {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +33,7 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th> -->
                     <th>Title</th>
                     <th>Artist</th>
                     <th>Year Created</th>
@@ -38,7 +43,7 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
             <tbody>
                 <?php foreach ($artworks as $row): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($row['ArtworkID']); ?></td>
+                        <!-- <td><?php echo htmlspecialchars($row['ArtworkID']); ?></td> -->
                         <td><?php echo htmlspecialchars($row['Title']); ?></td>
                         <td><?php echo htmlspecialchars($row['Artist']); ?></td>
                         <td><?php echo htmlspecialchars($row['YearCreated']); ?></td>

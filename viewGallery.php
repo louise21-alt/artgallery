@@ -17,6 +17,10 @@ $galleries = fetchAllGalleries($pdo); // Fetch all galleries
     h5 {
       text-align: right;
     }
+
+    .header-actions a {
+      color: white;
+    }
   </style>
 </head>
 
