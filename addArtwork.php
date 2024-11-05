@@ -50,6 +50,12 @@ if (isset($_POST['submitArtworkButton'])) {
             text-align: center;
             margin-bottom: 20px;
         }
+
+        h1 {
+      color: #3b2e2e;
+      font-size: 2rem;
+    }
+    
     </style>
 </head>
 
