@@ -36,6 +36,7 @@ $galleries = fetchAllGalleries($pdo); // Fetch all galleries
           <th>Gallery Name</th>
           <th>Location</th>
           <th>Description</th>
+          <th>Contact Info</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -45,6 +46,8 @@ $galleries = fetchAllGalleries($pdo); // Fetch all galleries
             <td><?php echo htmlspecialchars($gallery['GalleryName']); ?></td>
             <td><?php echo htmlspecialchars($gallery['Location']); ?></td>
             <td><?php echo htmlspecialchars($gallery['Description']); ?></td>
+            <td><?php echo htmlspecialchars($gallery['ContactInfo']); ?></td>
+
             <td>
               <a href="editGallery.php?GalleryID=<?php echo $gallery['GalleryID']; ?>">Edit</a>
               <a href="deleteGallery.php?GalleryID=<?php echo $gallery['GalleryID']; ?>">Delete</a>
