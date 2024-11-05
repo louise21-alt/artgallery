@@ -14,8 +14,14 @@ $artworks = fetchArtworks($pdo); // Fetch all artworks with gallery names
     <title>Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        h1 {
+            color: #3b2e2e;
+            font-size: 2rem;
+        }
+
         .header-actions a {
-            color: white;
+            color: #3b2e2e;
+            font-size: 1.2rem;
         }
     </style>
 </head>

@@ -18,8 +18,14 @@ $galleries = fetchAllGalleries($pdo); // Fetch all galleries
       text-align: right;
     }
 
+    h1 {
+      color: #3b2e2e;
+      font-size: 2rem;
+    }
+
     .header-actions a {
-      color: white;
+      color: #3b2e2e;
+      font-size: 1.2rem;
     }
   </style>
 </head>

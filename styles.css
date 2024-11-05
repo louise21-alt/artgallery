@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: rgba(139, 69, 19, 0.8);
+    /* background: rgba(139, 69, 19, 0.8); */
     color: #fdf5e6;
     padding: 15px 25px;
     display: flex;
